@@ -7,7 +7,7 @@
     <title>{{ config('app.name', 'UNBC') }} - @yield('titulo')</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
     @livewireStyles
 </head>
 <body class="bg-gray-100 dark:bg-gray-900">
@@ -31,5 +31,6 @@
         @yield('content')
     </main>
     @livewireScripts
+    <script src="{{ asset('build/assets/app.js') }}" defer></script>
 </body>
 </html>
